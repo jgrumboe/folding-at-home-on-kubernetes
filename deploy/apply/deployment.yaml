@@ -35,10 +35,10 @@ spec:
             port: 7396
         resources:
           limits:
-            memory: 100Mi
+            memory: 200Mi
           requests:
             cpu: 1m
-            memory: 100Mi
+            memory: 200Mi
         securityContext:
           readOnlyRootFilesystem: true
           runAsNonRoot: true

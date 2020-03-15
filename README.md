@@ -16,6 +16,14 @@ You can edit the deployment afterwards to change the configuration (see below) a
 kubectl edit deploy folding-at-home
 ```
 
+You can open the Folding@home web interface by forwarding port 7396 on your local machine:
+
+```
+kubectl port-forward $(kubectl get pod -l application=folding-at-home -o jsonpath="{.items[0].metadata.name}") 7396:7396
+```
+
+Now open http://localhost:7396/ in your browser.
+
 ## Configuration
 
 Change the Folding@Home user and team ID via environment variables.
