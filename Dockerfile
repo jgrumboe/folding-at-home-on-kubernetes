@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends curl bzip2 ca-certificates && \
-    curl -o /tmp/fah.tar.bz2 https://download.foldingathome.org/releases/public/release/fahclient/debian-stable-64bit/v7.6/fahclient_7.6.13-64bit-release.tar.bz2
+    curl -o /tmp/fah.tar.bz2 https://download.foldingathome.org/releases/public/release/fahclient/debian-stable-64bit/v7.6/fahclient_7.6.13-64bit-release.tar.bz2 && \
     tar --wildcards --to-stdout -xvf /tmp/fah.tar.bz2 "*/FAHClient" >> /bin/FAHClient && \
     tar --wildcards --to-stdout -xvf /tmp/fah.tar.bz2 "*/FAHCoreWrapper" >> /bin/FAHCoreWrapper && \
     chmod 0755 /bin/FAHClient && \
